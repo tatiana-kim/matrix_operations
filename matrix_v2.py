@@ -7,7 +7,8 @@ class Matrix:
     def main(self):
         print("1. Add matrices\
         \n2. Multiply matrix by a constant\
-        \n3. Multiply matrices\n0. Exit")
+        \n3. Multiply matrices\n4. Transpose matrix\
+        \n0. Exit")
         print("Your choice:", end=' ')
         choice = input()
         while choice != '0':
@@ -80,6 +81,11 @@ class Matrix:
     
     
     def matrix_multip(self):
+        print("Sorry, this option will be implemented soon", end='\n\n')
+        return self.main()
+
+
+    def m_transpose(self):
         print("Sorry, this option will be implemented soon", end='\n\n')
         return self.main()
 

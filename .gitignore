@@ -10,4 +10,4 @@ __pycache__/
 *.spec
 
 # I have recommandation and TODO/FIXIT messages in .txt files
-.txt
+**.txt

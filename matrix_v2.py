@@ -64,8 +64,6 @@ class Matrix:
     
     def matrix_add_const(self):
         print("Enter size of matrix: ", end='')
-        # TODO: if user input > or < than 2 elements (n_rows, n_cols)...
-        # ...then give message of error 
         n_rows, n_cols = [int(k) for k in input().split()]
         print("Enter matrix:")
         x = [[float(k) for k in input().split()] for row in range(n_rows)]
@@ -109,8 +107,6 @@ class Matrix:
         # create a matrix 0 with same dimension than both matrix to add
         # (answer's shape = rows of the fist x columns of the second)
         s = [[0 for col in range(n_cols_y)] for row in range(n_rows_x)]
-        # addition of two matrix
-        # i: row; j: i[col]
         for i in range(n_rows_x):
             for j in range(n_cols_y):
                 for k in range(n_cols_x):

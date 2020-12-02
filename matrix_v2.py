@@ -7,7 +7,8 @@ class Matrix:
     def main(self):
         print("1. Add matrices\
         \n2. Multiply matrix by a constant\
-        \n3. Multiply matrices\n0. Exit")
+        \n3. Multiply matrices\
+        \n4. Transpose matrix\n0. Exit")
         print("Your choice:", end=' ')
         choice = input()
         while choice != '0':
@@ -18,6 +19,8 @@ class Matrix:
                 return self.matrix_add_const()
             if choice == '3':
                 return self.matrix_multip()
+            if choice == '4':
+                return self.matrix_transpose_menu()
             else:
                 print("Sorry, this option will be implemented soon", end='\n\n')
                 return self.main()
@@ -64,6 +67,8 @@ class Matrix:
     
     def matrix_add_const(self):
         print("Enter size of matrix: ", end='')
+        # TODO: if user input > or < than 2 elements (n_rows, n_cols)...
+        # ...then give message of error 
         n_rows, n_cols = [int(k) for k in input().split()]
         print("Enter matrix:")
         x = [[float(k) for k in input().split()] for row in range(n_rows)]
@@ -107,6 +112,8 @@ class Matrix:
         # create a matrix 0 with same dimension than both matrix to add
         # (answer's shape = rows of the fist x columns of the second)
         s = [[0 for col in range(n_cols_y)] for row in range(n_rows_x)]
+        # addition of two matrix
+        # i: row; j: i[col]
         for i in range(n_rows_x):
             for j in range(n_cols_y):
                 for k in range(n_cols_x):
@@ -119,7 +126,62 @@ class Matrix:
             print()
         print()
         return self.main()
+    
+    
+    def matrix_transpose_menu(self):
+        '''
+        Transpose matrix menu
+        '''
+        print()
+        print("1. Main diagonal\n2. Side diagonal\
+        \n3. Vertical line\n4. Horizontal line")
+        print("Your choice: ", end='')
+        transp_choice = input()
+        if transp_choice == '1':
+            return self.transp_main_diag()
+        if transp_choice == '2':
+            return self.transp_side_diag()
+        if transp_choice == '3':
+            return self.transp_vert_line()
+        if transp_choice == '4':
+            return self.transp_horiz_line()
+        print("Not a correct choice. Do again", end='\n\n')
+        return self.main()
+
+    
+    def transp_main_diag(self):
+        print("Enter matrix size: ", end='')
+        rows, cols = map(int, input().split())
+        print("Enter matrix:")
+        x = [[int(i) for i in input().split()] for i in range(rows)]
+        s = [[0 for col in range(cols)] for row in range(rows)]
+        for i in range(rows):
+            for j in range(cols):
+                s[i][j] += x[j][i]
+        # formatting output
+        print("The result is:")
+        for i in s:
+            for j in i:
+                print(j, end=' ')
+            print()
+        print()
+        return self.main()
+    
+    
+    def transp_side_diag(self):
+        print("Coming soon!", end='\n\n')
+        return self.main()    
+ 
+    
+    def transp_vert_line(self):
+        print("Coming soon!", end='\n\n')
+        return self.main()
+    
+    
+    def transp_horiz_line(self):
+        print("Coming soon!", end='\n\n')
+        return self.main()
 
 
 a = Matrix()
-a.main()
+print(a.main())

@@ -7,7 +7,8 @@ class Matrix:
         print("1. Add matrices\
         \n2. Multiply matrix by a constant\
         \n3. Multiply matrices\
-        \n4. Transpose matrix\n0. Exit")
+        \n4. Transpose matrix\
+        \n5. Calculate a determinant\n0. Exit")
         print("Your choice:", end=' ')
         choice = input()
         while choice != '0':
@@ -20,6 +21,8 @@ class Matrix:
                 return self.matrix_multip()
             if choice == '4':
                 return self.matrix_transpose_menu()
+            if choice == '5':
+            	return self.matrix_determinant()
             else:
                 print("Sorry, this option will be implemented soon", end='\n\n')
                 return self.main()
@@ -179,6 +182,10 @@ class Matrix:
             for j in range(cols):
                 x[i][j], x[rows-i-1][j] = x[rows-i-1][j], x[i][j]
         self.formatting_output(x)
+
+    def matrix_determinant(self):
+    	print("Coming soon")
+    	return self.main()
 
 
 a = Matrix()

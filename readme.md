@@ -8,6 +8,7 @@ I plan to add the following matrix transformations:
 - Affine transformation
 - Inversion of matrices
 - Trace of a matrix
+- Determinant of a matrix
 - ...
 
 Technologies:

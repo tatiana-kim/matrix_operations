@@ -192,7 +192,11 @@ class Matrix:
 
     def inverse_matrix(self):
     	print('Comin soon')
-    	reutrn self.main()
+    	return self.main()
+
+    def trace_matrix(self):
+        print("Coming soon")
+        return self.main()
 
 
 a = Matrix()

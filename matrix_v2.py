@@ -8,7 +8,8 @@ class Matrix:
         \n2. Multiply matrix by a constant\
         \n3. Multiply matrices\
         \n4. Transpose matrix\
-        \n5. Calculate a determinant\n0. Exit")
+        \n5. Calculate a determinant\
+        \n6. Inverse matrix\n0. Exit")
         print("Your choice:", end=' ')
         choice = input()
         while choice != '0':
@@ -23,6 +24,8 @@ class Matrix:
                 return self.matrix_transpose_menu()
             if choice == '5':
             	return self.matrix_determinant()
+            if choice == '6':
+            	return self.inverse_matrix()
             else:
                 print("Sorry, this option will be implemented soon", end='\n\n')
                 return self.main()
@@ -186,6 +189,10 @@ class Matrix:
     def matrix_determinant(self):
     	print("Coming soon")
     	return self.main()
+
+    def inverse_matrix(self):
+    	print('Comin soon')
+    	reutrn self.main()
 
 
 a = Matrix()

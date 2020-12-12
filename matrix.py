@@ -161,31 +161,24 @@ class Matrix:
         self.formatting_output(s)
 
     def transp_side_diag(self):
-        print("Enter matrix size: ", end='')
-        rows, cols = map(int, input().split())
-        print("Enter matrix:")
-        x = [[int(i) for i in input().split()] for _i in range(rows)]
-        s = [[0 for _col in range(cols)] for _row in range(rows)]
-        for i in range(rows):
-            for j in range(cols):
-                s[i][j] = x[cols-j-1][cols-i-1]
-        self.formatting_output(s)
+        rows, cols, x = self.enter_one_matrix()
+        answer = [list(i) for i in zip(*x[::-1])][::-1]
+
+        # answer = [[0 for _col in range(cols)] for _row in range(rows)]
+        # for i in range(rows):
+        #     for j in range(cols):
+        #         answer[i][j] = x[cols-j-1][cols-i-1]
+        self.formatting_output(answer)
     
     def transp_vert_line(self):
-        print("Enter matrix size: ", end='')
-        rows, cols = map(int, input().split())
-        print("Enter matrix:")
-        x = [[int(i) for i in input().split()] for _i in range(rows)]
+        rows, cols, x = self.enter_one_matrix()
         for i in range(rows):
             for j in range(cols//2):
                 x[i][j], x[i][cols-j-1] = x[i][cols-j-1], x[i][j]
         self.formatting_output(x)
 
     def transp_horiz_line(self):
-        print("Enter matrix size: ", end='')
-        rows, cols = map(int, input().split())
-        print("Enter matrix:")
-        x = [[int(i) for i in input().split()] for _i in range(rows)]
+        rows, cols, x = self.enter_one_matrix()
         for i in range(rows//2):
             for j in range(cols):
                 x[i][j], x[rows-i-1][j] = x[rows-i-1][j], x[i][j]

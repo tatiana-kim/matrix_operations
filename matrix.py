@@ -194,10 +194,5 @@ class Matrix:
     	print('Comin soon')
     	return self.main()
 
-    def trace_matrix(self):
-        print("Coming soon")
-        return self.main()
-
-
 a = Matrix()
 a.main()

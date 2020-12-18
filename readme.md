@@ -2,13 +2,19 @@
 
 This program performs operations with matrices.
 
-Several basic operations have already been implemented
+Several basic operations have already been implemented:
+
+- Add matrices
+- Multiply matrix by a constant
+- Multiply two matrices
+
+
 I plan to add the following matrix transformations:
 - Transpose of a matrix
 - Affine transformation
 - Inversion of matrices
 - Trace of a matrix
-- Determinant of a matrix
+- Calculate a determinant of a matrix
 - ...
 
 Technologies:

@@ -156,20 +156,11 @@ class Matrix:
     def transp_main_diag(self):
         rows, cols, x = self.enter_one_matrix()
         s = [list(i) for i in zip(*x)]
-        # s = [[0 for _col in range(cols)] for _row in range(rows)]
-        # for i in range(rows):
-        #     for j in range(cols):
-        #         s[i][j] += x[j][i]
         self.formatting_output(s)
 
     def transp_side_diag(self):
         rows, cols, x = self.enter_one_matrix()
         answer = [list(i) for i in zip(*x[::-1])][::-1]
-
-        # answer = [[0 for _col in range(cols)] for _row in range(rows)]
-        # for i in range(rows):
-        #     for j in range(cols):
-        #         answer[i][j] = x[cols-j-1][cols-i-1]
         self.formatting_output(answer)
     
     def transp_vert_line(self):

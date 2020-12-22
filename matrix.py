@@ -34,9 +34,7 @@ class Matrix:
         """ Formatting output for all the methods """
         print("The result is:")
         for i in answer:
-            for j in i:
-                print(j, end=' ')
-            print()
+            print(*i)
         print()
         return self.main()
 
@@ -95,9 +93,7 @@ class Matrix:
         for i in range(n_rows_x):
             for j in range(n_cols_x):
                 s[i][j] = x[i][j] + y[i][j]
-        print(*s)
-        return self.main()
-        # self.formatting_output(s)
+        self.formatting_output(s)
 
     def matrix_add_const(self):
         n_rows, n_cols, x = self.enter_one_matrix()

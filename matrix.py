@@ -149,29 +149,38 @@ class Matrix:
         print("Not a correct choice. Do again", end='\n\n')
         return self.main()
 
-    def transp_main_diag(self):
+    # I think the second implementation (just below) is a byte better :/
+    def transp_main_diag0(self):
         rows, cols, x = self.enter_one_matrix()
         s = [list(i) for i in zip(*x)]
-        self.formatting_output(s)
+        return self.formatting_output(s)
+
+    def transp_main_diag(self):
+        rows, cols, m = self.enter_one_matrix()
+        for i in range(cols):
+            for j in range(rows):
+                print(m[j][i], end=' ')
+            print()
+        return self.main()
 
     def transp_side_diag(self):
         rows, cols, x = self.enter_one_matrix()
         answer = [list(i) for i in zip(*x[::-1])][::-1]
-        self.formatting_output(answer)
+        return self.formatting_output(answer)
     
     def transp_vert_line(self):
         rows, cols, x = self.enter_one_matrix()
         for i in range(rows):
             for j in range(cols//2):
                 x[i][j], x[i][cols-j-1] = x[i][cols-j-1], x[i][j]
-        self.formatting_output(x)
+        return self.formatting_output(x)
 
     def transp_horiz_line(self):
         rows, cols, x = self.enter_one_matrix()
         for i in range(rows//2):
             for j in range(cols):
                 x[i][j], x[rows-i-1][j] = x[rows-i-1][j], x[i][j]
-        self.formatting_output(x)
+        return self.formatting_output(x)
 
     def matrix_determinant(self):
     	print("Coming soon")

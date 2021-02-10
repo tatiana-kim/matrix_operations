@@ -66,7 +66,7 @@ class Matrix:
         b = [[float(j) for j in input().split()] for _j in range(n_rows_b)]
 
         # check if input was correct
-        # do it in for loop cauze here only first row are checked
+        # do it in for loop cauze here only first row will be checked
         # i.e. [[1, 2, 3], [1, 2]] - will cause an error
         real_cols_a, real_cols_b = len(a[0]), len(b[0])
         if n_cols_a != real_cols_a and n_cols_b != real_cols_b:
@@ -192,3 +192,11 @@ class Matrix:
 
 a = Matrix()
 a.main()
+
+
+def test_matrix():
+    pass
+
+if __name__ == "__main__":
+    test_matrix()
+

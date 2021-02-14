@@ -13,7 +13,6 @@ class Matrix:
         print("Your choice:", end=' ')
         choice = input()
         while choice != '0':
-            # try to use a dict
             if choice == '1':
                 return self.matrix_add()
             if choice == '2':

@@ -17,9 +17,10 @@ I plan to add the following matrix transformations:
 - Calculate a determinant of a matrix
 - ...
 
-Technologies:
+
 - Python 3.7
 
-Pure Python, without using numpy library
+### Usage
+```python matrix.py```
 
 Project status: under developement
